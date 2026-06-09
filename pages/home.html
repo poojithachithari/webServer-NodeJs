@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #1a1a2e;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      color: #e94560;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    nav ul a:hover {
+      color: #e94560;
+    }
+     nav ul a.active {
+      color: #e94560;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+      color: #fff;
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 span {
+      color: #e94560;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: #aaa;
+      max-width: 560px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+
+    .hero .btn {
+      display: inline-block;
+      background-color: #e94560;
+      color: #fff;
+      padding: 0.8rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.2s, transform 0.1s;
+    }
+
+    .hero .btn:hover {
+      background-color: #c73652;
+      transform: translateY(-2px);
+    }
+
+    /* Features */
+    .features {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .features h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .features .subtitle {
+      color: #777;
+      margin-bottom: 3rem;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.5rem;
+      width: 260px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .card .icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1a1a2e;
+      color: #777;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+    }
+
+    footer span {
+      color: #e94560;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/home" class="logo">MyApp</a>
+    <ul>
+      <li><a href="/home" class="active">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" >Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h1>Welcome to <span>MyApp</span></h1>
+    <p>A simple, clean starting point for your MERN stack project. Build something great.</p>
+    <a href="#features" class="btn">Get Started</a>
+  </section>
+
+  <section class="features" id="features">
+    <h2>What We Offer</h2>
+    <p class="subtitle">Everything you need to get up and running fast.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">&#9889;</div>
+        <h3>Fast Performance</h3>
+        <p>Optimized from the ground up for speed and responsiveness on all devices.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#128274;</div>
+        <h3>Secure by Default</h3>
+        <p>Built with security best practices so your data stays safe and protected.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#127757;</div>
+        <h3>Scalable Design</h3>
+        <p>A flexible architecture that grows with your project and your team.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 <span>MyApp</span>. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

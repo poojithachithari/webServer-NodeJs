@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #1a1a2e;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      color: #e94560;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    nav ul a:hover,
+    nav ul a.active {
+      color: #e94560;
+    }
+
+    /* Page Header */
+    .page-header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+      color: #fff;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .page-header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .page-header h1 span {
+      color: #e94560;
+    }
+
+    .page-header p {
+      color: #aaa;
+      font-size: 1.05rem;
+    }
+
+    /* Contact Layout */
+    .contact-section {
+      max-width: 960px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      flex: 1;
+      min-width: 280px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .contact-form h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-form h2 span {
+      color: #e94560;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: #444;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      background: #fafafa;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #e94560;
+      box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.12);
+      background: #fff;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background-color: #e94560;
+      color: #fff;
+      border: none;
+      padding: 0.85rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+    }
+
+    .btn-submit:hover {
+      background-color: #c73652;
+      transform: translateY(-2px);
+    }
+
+    /* Contact Info */
+    .contact-info {
+      flex: 0 0 260px;
+      min-width: 220px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .info-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      transition: transform 0.2s;
+    }
+
+    .info-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .info-card .icon {
+      font-size: 1.6rem;
+      flex-shrink: 0;
+    }
+
+    .info-card h3 {
+      font-size: 0.9rem;
+      color: #e94560;
+      margin-bottom: 0.25rem;
+    }
+
+    .info-card p {
+      font-size: 0.88rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1a1a2e;
+      color: #777;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+      margin-top: 4rem;
+    }
+
+    footer span {
+      color: #e94560;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/home" class="logo">MyApp</a>
+    <ul>
+      <li><a href="/home" >Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-header">
+    <h1>Contact <span>Us</span></h1>
+    <p>Have a question or want to work together? We'd love to hear from you.</p>
+  </section>
+
+  <section class="contact-section">
+
+    <form class="contact-form">
+      <h2>Send a <span>Message</span></h2>
+
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="John Doe" />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="john@example.com" />
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" placeholder="How can we help?" />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Write your message here..."></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <div class="info-card">
+        <div class="icon">&#128205;</div>
+        <div>
+          <h3>Address</h3>
+          <p>123 Main Street<br />Toronto, ON, Canada</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="icon">&#128222;</div>
+        <div>
+          <h3>Phone</h3>
+          <p>+1 (416) 555-0199</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="icon">&#9993;</div>
+        <div>
+          <h3>Email</h3>
+          <p>hello@myapp.com</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="icon">&#128336;</div>
+        <div>
+          <h3>Hours</h3>
+          <p>Mon – Fri: 9am – 6pm<br />Sat – Sun: Closed</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2026 <span>MyApp</span>. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

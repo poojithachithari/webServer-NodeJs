@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #1a1a2e;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      color: #e94560;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    nav ul a:hover,
+    nav ul a.active {
+      color: #e94560;
+    }
+
+    /* Page Header */
+    .page-header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+      color: #fff;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .page-header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .page-header h1 span {
+      color: #e94560;
+    }
+
+    .page-header p {
+      color: #aaa;
+      font-size: 1.05rem;
+    }
+
+    /* About Section */
+    .about {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .about-text h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-text h2 span {
+      color: #e94560;
+    }
+
+    .about-text p {
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .about-image {
+      flex: 1;
+      min-width: 260px;
+      background: linear-gradient(135deg, #0f3460, #e94560);
+      border-radius: 12px;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 5rem;
+    }
+
+    /* Stats */
+    .stats {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .stats-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .stat {
+      flex: 1;
+      min-width: 140px;
+    }
+
+    .stat .number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #e94560;
+    }
+
+    .stat .label {
+      color: #aaa;
+      font-size: 0.9rem;
+      margin-top: 0.3rem;
+    }
+
+    /* Team */
+    .team {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .team h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .team .subtitle {
+      color: #777;
+      margin-bottom: 3rem;
+    }
+
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .member {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem 1.5rem;
+      width: 220px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .member:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .member .avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0f3460, #e94560);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin: 0 auto 1rem;
+      color: #fff;
+    }
+
+    .member h3 {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .member .role {
+      color: #e94560;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1a1a2e;
+      color: #777;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+    }
+
+    footer span {
+      color: #e94560;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/home" class="logo">MyApp</a>
+    <ul>
+      <li><a href="/home" >Home</a></li>
+      <li><a href="/about" class="active">About</a></li>
+      <li><a href="/contact" >Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-header">
+    <h1>About <span>Us</span></h1>
+    <p>Learn who we are, what drives us, and the team behind MyApp.</p>
+  </section>
+
+  <section class="about">
+    <div class="about-text">
+      <h2>Our <span>Story</span></h2>
+      <p>MyApp was built with one goal in mind — to make building web applications simpler, faster, and more enjoyable for developers everywhere.</p>
+      <p>We started as a small team with a big idea: that great tools should be accessible to everyone, regardless of experience level. Today we continue that mission with every line of code we write.</p>
+    </div>
+    <div class="about-image">&#128640;</div>
+  </section>
+
+  <section class="stats">
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="number">5K+</div>
+        <div class="label">Users</div>
+      </div>
+      <div class="stat">
+        <div class="number">120+</div>
+        <div class="label">Projects Shipped</div>
+      </div>
+      <div class="stat">
+        <div class="number">3</div>
+        <div class="label">Years Running</div>
+      </div>
+      <div class="stat">
+        <div class="number">99%</div>
+        <div class="label">Uptime</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team">
+    <h2>Meet the Team</h2>
+    <p class="subtitle">The people who make it all happen.</p>
+    <div class="team-grid">
+      <div class="member">
+        <div class="avatar">&#128104;</div>
+        <h3>Alex Johnson</h3>
+        <p class="role">Founder & CEO</p>
+      </div>
+      <div class="member">
+        <div class="avatar">&#128105;</div>
+        <h3>Sara Williams</h3>
+        <p class="role">Lead Developer</p>
+      </div>
+      <div class="member">
+        <div class="avatar">&#128104;</div>
+        <h3>Chris Lee</h3>
+        <p class="role">UI/UX Designer</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 <span>MyApp</span>. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
